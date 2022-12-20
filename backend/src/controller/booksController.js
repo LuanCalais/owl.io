@@ -3,7 +3,11 @@ import books from "../models/Books.js";
 class booksController {
   static getAllBooks = (req, res) => {
     books.find((err, book) => {
-      res.status(200).json(book);
+      if (!err) {
+        res.status(200).json(book);
+      } else {
+        res.status(400).send({ message: `${err.message} - Books no found` });
+      }
     });
   };
 
@@ -36,7 +40,7 @@ class booksController {
     const id = req.params.id;
     books.findByIdAndUpdate(id, { $set: req.body }, (err) => {
       if (!err) {
-        res.status(200).send({ message: `Update book success` });
+        res.status(200).send({ message: ` - Update book success` });
       } else {
         res.status(500).send({ message: `${err.message} - Update book error` });
       }
@@ -47,9 +51,9 @@ class booksController {
     const id = req.params.id;
     books.findByIdAndDelete(id, (err) => {
       if (!err) {
-        res.status(200).send({ message: `Book delete success` });
+        res.status(200).send({ message: ` - Book delete success` });
       } else {
-        res.status(200).send({ message: `Book delete error` });
+        res.status(200).send({ message: ` - Book delete error` });
       }
     });
   };
