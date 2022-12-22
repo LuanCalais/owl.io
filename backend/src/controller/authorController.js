@@ -37,11 +37,25 @@ class authorsController {
 
   static authorUpdate = (req, res) => {
     const id = req.params.id;
-    authors.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+    authors.findByIdAndUpdate(id, { $set: req.body }, (err) => {
+      if (!err) {
+        res.status(200).send({ message: `- Update author success` });
+      } else {
+        res
+          .status(500)
+          .send({ message: `${err.message} - Update author error` });
+      }
+    });
+  };
+
+  static authorDelete = (req, res) => {
+    const id = req.params.id;
+
+    authors.findByIdAndDelete(id, (err) => {
       if(!err){
-        res.status(200).send({message: `- Update author success`})
+        res.status(200).send({message: ` - Authos delete success`})
       }else{
-        res.status(500).send({message: `${err.message} - Update author error`})
+        res.status(500).send({message: ` - Author delete error`})
       }
     })
   };

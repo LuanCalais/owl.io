@@ -53,7 +53,7 @@ class booksController {
       if (!err) {
         res.status(200).send({ message: ` - Book delete success` });
       } else {
-        res.status(200).send({ message: ` - Book delete error` });
+        res.status(500).send({ message: ` - Book delete error` });
       }
     });
   };

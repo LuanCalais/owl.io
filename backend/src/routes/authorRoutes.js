@@ -7,5 +7,6 @@ const router = express
   .get("/authors/:id", authorsController.getAuthorById)
   .post("/authors", authorsController.authorCreate)
   .put("/authors/:id", authorsController.authorUpdate)
+  .delete("/authors/:id", authorsController.authorDelete)
 
 export default router;
