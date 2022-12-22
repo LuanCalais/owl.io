@@ -14,12 +14,12 @@ class authorsController {
   static getAuthorById = (req, res) => {
     const id = req.params.id;
     authors.findById(id, (err, author) => {
-      if(!err){
-        res.status(200).json(author)
-      }else{
-        res.status(400).send({message: `${err.message} - Author not found`})
+      if (!err) {
+        res.status(200).json(author);
+      } else {
+        res.status(400).send({ message: `${err.message} - Author not found` });
       }
-    })
+    });
   };
 
   static authorCreate = (req, res) => {
@@ -33,6 +33,17 @@ class authorsController {
         res.status(201).send(author.toJSON());
       }
     });
+  };
+
+  static authorUpdate = (req, res) => {
+    const id = req.params.id;
+    authors.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+      if(!err){
+        res.status(200).send({message: `- Update author success`})
+      }else{
+        res.status(500).send({message: `${err.message} - Update author error`})
+      }
+    })
   };
 }
 
