@@ -11,6 +11,17 @@ class authorsController {
     });
   };
 
+  static getAuthorById = (req, res) => {
+    const id = req.params.id;
+    authors.findById(id, (err, author) => {
+      if(!err){
+        res.status(200).json(author)
+      }else{
+        res.status(400).send({message: `${err.message} - Author not found`})
+      }
+    })
+  };
+
   static authorCreate = (req, res) => {
     let author = new authors(req.body);
     author.save((err) => {
