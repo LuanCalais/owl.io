@@ -59,6 +59,20 @@ class booksController {
       }
     });
   };
+
+  static getBooksByAuthor = (req, res) => {
+    const author = req.query.author
+
+    books.find({'authors': author}, {} ,(err, books) => {
+      if(!err){
+        res.status(200).send(books)
+      }else{
+        res.status(500).send({message: ` - Books not found`})
+      }
+    })
+
+  }
+
 }
 
 export default booksController;
