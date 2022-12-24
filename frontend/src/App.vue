@@ -56,18 +56,181 @@
       </div>
     </div>
   </nav>
+
+  <header class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-6">
+        <div class="left-header">
+          <div class="titulo-lateral">
+            <h4>Bem vindo de volta!</h4>
+            <h5>Por favor entre com seu login</h5>
+          </div>
+
+          <div class="formulario-cad">
+            <form name="form.log">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-form-label">E-mail</label>
+                <div class="col-sm-10">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="fulano@email.com"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword3" class="col-form-label">Senha</label>
+                <div class="col-sm-10">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="senha"
+                    id="senha"
+                    placeholder="********"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="botao-logar">
+                  <button type="submit" class="btn btn-block btn-outline-dark">
+                    Logar <i class="bx bx-right-arrow-alt"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="forgot-password">
+                  Esqueceu sua senha? Clique <a href="#">aqui</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-lg-6 d-none d-md-none d-lg-block">
+        <div class="ilustracao">
+          <img
+            src="./assets/img/ilustracoes/Ilustracao-Inicio.png  "
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+      <div class="conteudo-central">
+        <div class="container mt-4">
+          <div class="row area-1">
+            <div class="col-lg-6 d-none d-md-none d-lg-block img-section">
+              <img src="./assets/img/ilustracoes/sessao1-1.png" alt="" />
+            </div>
+
+            <div class="col-lg-6 mt-5">
+              <div class="box-text text-section">
+                <div class="box-text-h5">
+                  <h5>Lorem Ipsum</h5>
+                </div>
+
+                <div class="box-text-p">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row area-2">
+            <div class="col-lg-6 mt-5">
+              <div class="box-text text-section">
+                <div class="box-text-h5">
+                  <h5>Lorem Ipsum</h5>
+                </div>
+
+                <div class="box-text-p">
+                  <p>
+                    "It is a long established fact that a reader will be
+                    distracted by the readable content of a page when looking at
+                    its layout. The point of using Lorem Ipsum is that it has a
+                    more-or-less normal distribution of letters, as opposed to
+                    using 'Content here, content here', making it look like
+                    readable English."
+                    <span> -Fulano Siclano </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 d-none d-md-none d-lg-block img-section">
+              <img
+                src="./assets/img/ilustracoes/sessap1-2.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="sessaoFinal">
+    <article class="container">
+      <h1>OWL</h1>
+
+      <h1>OWL</h1>
+    </article>
+  </section>
+
+  <footer class="bg-dark text-center text-white">
+    <div class="container p-4 pb-0">
+      <div class="mb-4">
+        <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="https://www.facebook.com/luan.calais"
+          role="button"
+          target="_blank"
+          ><i class="bx bxl-facebook"></i
+        ></a>
+        <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="https://www.instagram.com/luan_calais/?hl=en"
+          target="_blank"
+          role="button"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="https://www.linkedin.com/in/luan-s-calais-186104217/?originalSubdomain=br"
+          target="_blank"
+          role="button"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="https://github.com/LuanCalais?tab=repositories"
+          target="_blank"
+          role="button"
+          ><i class="bx bxl-github"></i
+        ></a>
+      </div>
+    </div>
+
+    <div
+      class="text-center p-3 copyright-box"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+      Feito com <i class="bx bxs-heart"></i> por
+      <span class="text-white">&nbsp; Luan_Calais</span>
+    </div>
+  </footer>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>

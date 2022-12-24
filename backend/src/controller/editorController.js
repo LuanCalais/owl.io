@@ -15,7 +15,6 @@ class editorsController {
     };
 
   static editorCreate = (req, res) => {
-    console.log('Chegando aqui')
     let editor = new editors(req.body);
     editor.save((err) => {
       if (err) {
