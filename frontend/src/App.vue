@@ -1,17 +1,61 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<script setup></script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <nav class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-6">
+        <h1 class="mt-4"><i class="bx bx-code-alt"></i> <span>Owl.io</span></h1>
+      </div>
+
+      <div class="col-sm-12 col-lg-6">
+        <div class="row">
+          <div class="col-sm-12 col-lg-8">
+            <div class="lateral">
+              "Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry."
+            </div>
+          </div>
+          <div class="col-lg-4 perfis">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-perfil">
+                  <li>
+                    <img src="./assets/img/perfis/p1.jpg" class="img1" alt="" />
+                  </li>
+                  <li>
+                    <img src="./assets/img/perfis/p2.jpg" class="img2" alt="" />
+                  </li>
+                  <li>
+                    <img src="./assets/img/perfis/p3.jpg" class="img3" alt="" />
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="review-list">
+                  <li>
+                    <i class="bx bxs-star review first-list-review"></i>
+                  </li>
+                  <li>
+                    <i class="bx bxs-star review"></i>
+                  </li>
+                  <li>
+                    <i class="bx bxs-star review"></i>
+                  </li>
+                  <li>
+                    <i class="bx bxs-star review"></i>
+                  </li>
+                  <li>
+                    <i class="bx bxs-star-half review"></i>
+                  </li>
+                </ul>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <style scoped>
