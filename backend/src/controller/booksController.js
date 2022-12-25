@@ -4,6 +4,7 @@ class booksController {
   static getAllBooks = (req, res) => {
     books.find()
     .populate('author', "name")
+    .populate('editor', "name")
     .exec((err, book) => {
       if (!err) {
         res.status(200).json(book);
