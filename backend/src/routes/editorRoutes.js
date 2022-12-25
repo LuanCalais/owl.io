@@ -6,6 +6,7 @@ const router = express
   .get("/editors", editorsController.getAllEditors)
   .get("/editors/:id", editorsController.getEditorById)
   .post("/editors", editorsController.editorCreate)
-  .put("/editors/:id", editorsController.editorUpdate);
+  .put("/editors/:id", editorsController.editorUpdate)
+  .delete("/editors/:id", editorsController.editorDelete);
 
 export default router;

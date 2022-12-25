@@ -46,6 +46,18 @@ class editorsController {
       }
     });
   };
+
+  static editorDelete = (req, res) => {
+    const id = req.params.id;
+
+    editors.findByIdAndDelete(id, (err) => {
+      if (!err) {
+        res.status(200).send({ message: ` - Delete editor` });
+      } else {
+        res.status(500).send({ message: ` - Delete editor error` });
+      }
+    });
+  };
 }
 
 export default editorsController;
