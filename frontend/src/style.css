@@ -144,7 +144,7 @@ body header .left-header .titulo-lateral h5 {
   font-size: 1.1rem;
 }
 
-body header .left-header .formulario-cad {
+body header .left-header .formulario {
   border: 1px solid rgba(0, 0, 0, 0.226);
   border-radius: 0px 10px 10px 0px;
   -webkit-box-shadow: -10px 6px 0px 1px #000000;
@@ -152,12 +152,12 @@ body header .left-header .formulario-cad {
   margin-left: auto;
 }
 
-body header .left-header .formulario-cad .form-group {
+body header .left-header .formulario .form-group {
   margin: 8px;
   padding: 5px;
 }
 
-body header .left-header .formulario-cad .form-group .err-msg {
+body header .left-header .formulario .form-group .err-msg {
   background-color: #e04747;
   color: #fff;
   padding: 9px;
@@ -166,34 +166,34 @@ body header .left-header .formulario-cad .form-group .err-msg {
   margin: 10px;
 }
 
-body header .left-header .formulario-cad .form-group label {
+body header .left-header .formulario .form-group label {
   font-weight: 900;
   font-size: 0.9rem;
 }
 
-body header .left-header .formulario-cad .form-group input {
+body header .left-header .formulario .form-group input {
   background-color: #eeeeee;
   border-radius: 0px;
 }
 
-body header .left-header .formulario-cad .form-group .botao-logar button {
+body header .left-header .formulario .form-group .botao-logar button {
   margin-top: 20px;
   width: 100%;
   font-weight: 500;
   border-radius: 0px;
 }
 
-body header .left-header .formulario-cad .form-group .botao-logar button i {
+body header .left-header .formulario .form-group .botao-logar button i {
   font-size: 1.5rem;
 }
 
-body header .left-header .formulario-cad .form-group .forgot-password {
+body header .left-header .formulario .form-group .forgot-password {
   color: #919191;
   margin-top: 20px;
   font-size: 0.9rem;
 }
 
-body header .left-header .formulario-cad .form-group .forgot-password a {
+body header .left-header .formulario .form-group .forgot-password a {
   color: #000000;
   font-weight: 700;
   text-decoration: none;
