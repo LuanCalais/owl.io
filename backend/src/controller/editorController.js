@@ -33,7 +33,7 @@ class editorsController {
     });
   };
 
-  static editorUpdate = (res, res) => {
+  static editorUpdate = (req, res) => {
     const id = req.params.id;
 
     editors.findByIdAndUpdate(id, { $set: req.body }, (err) => {
