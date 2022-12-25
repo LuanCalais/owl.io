@@ -33,8 +33,19 @@ class editorsController {
     });
   };
 
-  
+  static editorUpdate = (res, res) => {
+    const id = req.params.id;
 
+    editors.findByIdAndUpdate(id, { $set: req.body }, (err) => {
+      if (!err) {
+        res.status(200).send({ message: `- Update editor success` });
+      } else {
+        res
+          .status(500)
+          .send({ message: `${err.message} - Update editor error` });
+      }
+    });
+  };
 }
 
 export default editorsController;
