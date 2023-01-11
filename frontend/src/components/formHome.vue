@@ -1,4 +1,8 @@
 <template>
+  <div class="titulo-lateral">
+    <h4>{{ isExistUser ? "Bem vindo de volta!" : "Bem vindo!" }}</h4>
+    <h5>{{ isExistUser ? "Faça seu login" : "Cadastre-se" }}</h5>
+  </div>
   <div class="formulario" v-if="!isExistUser">
     <form name="form.cad">
       <div class="form-group row">
@@ -42,18 +46,15 @@
           />
         </div>
       </div>
-
-      <div class="form-group row">
+    </form>
+    
+    <div class="form-group row">
         <div class="botao-logar">
-          <button
-            type="submit"
-            class="btn btn-block btn-outline-dark"
-          >
+          <button v-on:click="singIn" class="btn btn-block btn-outline-dark" :disabled="disabledControlSingUp">
             Cadastrar <i class="bx bx-right-arrow-alt"></i>
-          </button>
+          </button>      
         </div>
       </div>
-    </form>
   </div>
 
   <div class="formulario" v-else>
@@ -112,18 +113,30 @@ export default {
     };
   },
 
+  computed: {
+    disabledControlSingUp: function(){
+      if(!this.user.name?.trim() || !this.user.email?.trim() || !this.user.password?.trim()){
+        return true
+      }else{
+        false
+      }
+    }
+  },  
+
+  methods: {
+    singIn: function () {
+      console.log(this.user);
+    },
+  },
+
   props: {
     isExistUser: {
       required: true,
       default: false,
     },
   },
-
 };
 </script>
 
 <style scoped>
-h1 {
-  color: red;
-}
 </style>

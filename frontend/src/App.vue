@@ -63,10 +63,6 @@ import FormHome from "./components/formHome.vue";
     <div class="row">
       <div class="col-sm-12 col-lg-6">
         <div class="left-header">
-          <div class="titulo-lateral">
-            <h4>Bem vindo de volta!</h4>
-            <h5>Por favor entre com seu login</h5>
-          </div>
           <FormHome :isExistUser="false" />
         </div>
       </div>
